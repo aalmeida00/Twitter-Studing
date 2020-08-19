@@ -2,17 +2,16 @@ import React from "react";
 import "./App.css";
 import "./Sidebar/Sidebar";
 import Sidebar from "./Sidebar/Sidebar";
-
+import Feed from "./Feed/Feed";
+import Widgets from "./Widgets/Widgets";
 function App() {
   return (
     <div className="app">
-      <h1>Twitter Clone</h1>
-
       <Sidebar />
 
-      {/* Feed */}
+      <Feed />
 
-      {/* Widgets */}
+      <Widgets />
     </div>
   );
 }
