@@ -11,26 +11,24 @@ function Posts({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://pbs.twimg.com/profile_images/1205325886704226304/m7M4zXtv_400x400.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Andre Almeida{" "}
+              {displayName}{" "}
               <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @aalmeida00
+                {verified && <VerifiedUserIcon className="post__badge" />}{" "}
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>Essa é uma demonstração com Lorem ipsum </p>
+            <p>{text} </p>
           </div>
         </div>
-        <img
-          src="https://media3.giphy.com/media/y2qhz4wPA2XlK/giphy.gif?cid=ecf05e47akd50bfczdpwjy8e3zjqhvpe6iyd5smhmgpkxzoy&rid=giphy.gif"
-          alt=""
-        />
+        <img src={image} alt="" />
         <div className="post__footer">
           <ChatBubbleIcon fontSize="small" />
           <RepeatIcon fontSize="small" />
